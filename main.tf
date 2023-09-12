@@ -67,7 +67,7 @@ resource "aws_iam_role" "role" {
   name                  = module.tfcloud.id
   path                  = var.iam_role_path
   permissions_boundary  = var.iam_role_permissions_boundary != "" ? var.iam_role_permissions_boundary : null
-  tags                  = var.tags
+  tags                  = module.this.tags
 }
 
 resource "aws_iam_role_policy_attachment" "admin" {

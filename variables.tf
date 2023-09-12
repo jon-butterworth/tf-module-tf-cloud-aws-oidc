@@ -75,9 +75,3 @@ variable "url" {
   default     = "app.terraform.io"
   sensitive   = false
 }
-
-variable "tags" {
-  default     = {}
-  type        = map(string)
-  sensitive   = false
-}
